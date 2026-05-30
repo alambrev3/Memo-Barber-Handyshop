@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Momo Barber & Handy Shop | Premium Barbershop Wien 1210 | Fade Spezialist Floridsdorf</title>
+<meta name="description" content="Momo Barber & Handy Shop – Wiens bestbewerteter Premium-Barbershop in Floridsdorf, 1210 Wien. Skin Fades, Bartformung, Kinderhaarschnitte. Walk-Ins willkommen. Jetzt anrufen: 0676 5992433."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root {
+  --black:    #080808;
+  --surface:  #111111;
+  --graphite: #1A1A1A;
+  --card:     #202020;
+  --elevated: #272727;
+  --red:      #8B1A1A;
+  --red-mid:  #B01E1E;
+  --red-bright:#D42222;
+  --silver:   #D8D8D8;
+  --silver-light: #F0F0F0;
+  --silver-dim:   #C0C0C0;
+  --white:    #F0EDE8;
+  --cream:    #E8E3D8;
+  --stripe-r: #9B1C1C;
+  --stripe-w: #D8D0C0;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:'Barlow',sans-serif;overflow-x:hidden;}
+
+/* ── TEXTURE ── */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.68' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.038'/%3E%3C/svg%3E");
+  opacity:1;
+}
+
+/* ── FONTS ── */
+.font-display{font-family:'Bebas Neue',sans-serif;}
+.font-serif{font-family:'EB Garamond',serif;}
+.font-heading{font-family:'Oswald',sans-serif;}
+
+/* ── CHROME TEXT ── */
+.chrome-text{color:var(--silver-light);}
+.red-glow-text{color:var(--silver-light);text-shadow:none;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(8,8,8,0.96);backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(160,160,160,0.12);transition:box-shadow 0.3s;overflow:visible;}
+nav.scrolled{box-shadow:0 4px 48px rgba(0,0,0,0.8),0 1px 0 rgba(139,26,26,0.4);}
+.nav-logo{height:110px;width:auto;object-fit:contain;margin-left:-12px;}
+.nav-link{color:var(--silver-dim);font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;transition:color 0.2s;padding:4px 0;position:relative;text-decoration:none;}
+.nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--red-bright);transition:width 0.3s;}
+.nav-link:hover{color:var(--white);}
+.nav-link:hover::after{width:100%;}
+
+/* ── BUTTONS ── */
+.btn-red{background:var(--red);color:var(--white);font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:11px 28px;border-radius:2px;border:1px solid rgba(220,34,34,0.3);transition:background 0.2s,transform 0.2s,box-shadow 0.2s;cursor:pointer;display:inline-block;text-decoration:none;box-shadow:0 4px 18px rgba(139,26,26,0.3);}
+.btn-red:hover{background:var(--red-mid);transform:translateY(-2px);box-shadow:0 8px 28px rgba(176,30,30,0.45);}
+.btn-red:active{transform:translateY(0);}
+.btn-silver{border:1px solid var(--silver-dim);color:var(--silver-light);font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:11px 28px;border-radius:2px;transition:border-color 0.2s,color 0.2s,background 0.2s,transform 0.2s,box-shadow 0.2s;cursor:pointer;display:inline-block;text-decoration:none;background:transparent;}
+.btn-silver:hover{border-color:var(--silver-light);color:var(--white);background:rgba(255,255,255,0.06);transform:translateY(-1px);box-shadow:0 4px 20px rgba(200,200,200,0.1);}
+
+/* ── MUSTACHE DIVIDER ── */
+.mustache-divider{display:flex;align-items:center;justify-content:center;padding:8px 0;}
+.mustache-divider svg{width:80px;height:28px;opacity:0.55;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(160,160,160,0.25),transparent);}
+
+/* ── VINTAGE BADGE LABEL ── */
+.section-badge{display:inline-flex;align-items:center;gap:10px;margin-bottom:14px;}
+.section-badge::before,.section-badge::after{content:'';width:32px;height:1px;background:var(--silver-dim);}
+.section-badge span{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:var(--silver);}
+
+/* ── BARBER POLE STRIPE ── */
+.barber-stripe{width:4px;background:repeating-linear-gradient(45deg,var(--stripe-r),var(--stripe-r) 6px,var(--stripe-w) 6px,var(--stripe-w) 12px);border-radius:2px;flex-shrink:0;}
+
+/* ── 3D BARBER POLES ── */
+.barber-pole{position:fixed;top:0;bottom:0;width:10px;z-index:200;pointer-events:none;overflow:hidden;opacity:0.72;}
+.barber-pole-left{left:0;border-radius:0 4px 4px 0;box-shadow:4px 0 14px rgba(0,0,0,0.55);}
+.barber-pole-right{right:0;border-radius:4px 0 0 4px;box-shadow:-4px 0 14px rgba(0,0,0,0.55);}
+.barber-pole-stripes{position:absolute;inset:0;background:repeating-linear-gradient(-45deg,var(--stripe-r),var(--stripe-r) 12px,var(--stripe-w) 12px,var(--stripe-w) 24px,#1B3A6B 24px,#1B3A6B 36px);animation:pole-march 1.8s linear infinite;}
+.barber-pole-shine{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0.5) 0%,rgba(255,255,255,0.4) 28%,rgba(255,255,255,0.12) 52%,rgba(0,0,0,0.45) 100%);}
+
+/* ── HERO ── */
+#hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:var(--black);}
+.hero-photo-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;filter:brightness(0.92) saturate(0.8);pointer-events:none;}
+.hero-logo-bg{position:absolute;top:50%;left:50%;width:55%;max-width:480px;transform:translate(-50%,-50%);pointer-events:none;animation:hero-img-in 1.6s var(--ease-out-expo) both,flag-wave 3s ease-in-out 2s infinite;}
+@keyframes flag-wave{
+  0%  {transform:translate(-50%,-50%) perspective(600px) rotateY(-24deg) rotateX(3deg)  scaleX(1);}
+  50% {transform:translate(-50%,-50%) perspective(600px) rotateY(24deg)  rotateX(-3deg) scaleX(0.83);}
+  100%{transform:translate(-50%,-50%) perspective(600px) rotateY(-24deg) rotateX(3deg)  scaleX(1);}
+}
+.hero-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 30%,rgba(8,8,8,0.45) 100%);}
+.hero-spotlight{position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 40%,rgba(139,26,26,0.08) 0%,transparent 70%);}
+
+/* ── SECTION PAD ── */
+.section-pad{padding:96px 0;}
+@media(max-width:768px){.section-pad{padding:64px 0;}}
+
+/* ── PROOF BAR ── */
+#proof{background:var(--surface);border-top:1px solid rgba(160,160,160,0.1);border-bottom:1px solid rgba(160,160,160,0.1);}
+.proof-item{text-align:center;padding:32px 16px;position:relative;}
+.proof-item+.proof-item::before{content:'';position:absolute;left:0;top:20%;height:60%;width:1px;background:rgba(160,160,160,0.15);}
+.proof-num{font-family:'Bebas Neue',sans-serif;font-size:46px;line-height:1;color:var(--white);}
+.proof-label{font-size:11px;color:var(--silver-dim);letter-spacing:0.12em;text-transform:uppercase;margin-top:6px;}
+.proof-red{color:var(--silver)!important;}
+
+/* ── ABOUT ── */
+#about{background:var(--black);}
+.about-img{position:relative;border-radius:2px;overflow:hidden;}
+.about-img img{width:100%;height:480px;object-fit:cover;filter:brightness(0.85) saturate(0.75);transition:transform 0.6s;}
+.about-img:hover img{transform:scale(1.03);}
+.about-img::before{content:'';position:absolute;inset:0;z-index:1;border:1px solid rgba(160,160,160,0.2);border-radius:2px;pointer-events:none;}
+.about-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(8,8,8,0.7));}
+.about-frame{position:absolute;inset:12px;border:1px solid rgba(139,26,26,0.35);z-index:2;border-radius:1px;pointer-events:none;}
+.bullet-dot{width:6px;height:6px;background:var(--red-bright);border-radius:50%;flex-shrink:0;}
+
+/* ── SERVICES ── */
+#services{background:var(--surface);}
+.tab-btn{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;padding:10px 22px;border:1px solid rgba(160,160,160,0.2);color:var(--silver-dim);background:transparent;cursor:pointer;transition:background 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;border-radius:1px;}
+.tab-btn.active,.tab-btn:hover{background:var(--red);color:var(--white);border-color:var(--red-bright);box-shadow:0 0 20px rgba(139,26,26,0.4);}
+.service-card{background:var(--graphite);border:1px solid rgba(160,160,160,0.08);border-top:2px solid transparent;border-radius:2px;padding:26px;transition:border-color 0.25s,transform 0.25s,box-shadow 0.25s;cursor:pointer;position:relative;overflow:hidden;}
+.service-card:hover{border-top-color:var(--red-bright);border-left-color:rgba(180,30,30,0.25);border-right-color:rgba(180,30,30,0.25);border-bottom-color:rgba(180,30,30,0.15);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.6),0 0 0 1px rgba(139,26,26,0.15);}
+.service-icon{width:44px;height:44px;background:rgba(139,26,26,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px;border:1px solid rgba(139,26,26,0.25);transition:background 0.2s,border-color 0.2s;}
+.service-card:hover .service-icon{background:rgba(139,26,26,0.25);}
+.price-tag{font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--silver-light);}
+.tab-content{flex:0 0 100%;min-width:0;display:grid;}
+.tabs-slider-wrap{overflow:hidden;border-radius:2px;}
+.tabs-slider{display:flex;align-items:start;transition:transform 0.5s cubic-bezier(0.16,1,0.3,1);will-change:transform;}
+/* dot indicators */
+.tab-dots{display:flex;justify-content:center;gap:8px;margin-top:32px;}
+.tab-dot{width:6px;height:6px;border-radius:50%;background:var(--silver-dim);transition:background 0.25s,transform 0.25s;cursor:pointer;}
+.tab-dot.active{background:var(--red-bright);transform:scale(1.4);}
+
+/* ── GALLERY ── */
+#gallery{background:var(--black);}
+.gallery-grid{columns:2;gap:8px;}
+@media(min-width:768px){.gallery-grid{columns:3;}}
+.gallery-item{break-inside:avoid;margin-bottom:8px;border-radius:2px;overflow:hidden;position:relative;cursor:pointer;}
+.gallery-item img{width:100%;display:block;transition:transform 0.4s;filter:saturate(0.7);}
+.gallery-item:hover img{transform:scale(1.07);filter:saturate(1);}
+.gallery-item::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.65) 0%,transparent 55%);opacity:0;transition:opacity 0.3s;}
+.gallery-item:hover::after{opacity:1;}
+.gallery-label{position:absolute;bottom:0;left:0;right:0;padding:16px 12px 12px;color:var(--white);font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:0.08em;z-index:2;transform:translateY(4px);opacity:0;transition:opacity 0.3s,transform 0.3s;}
+.gallery-item:hover .gallery-label{opacity:1;transform:translateY(0);}
+.gallery-item-border{position:absolute;inset:0;border:1px solid rgba(160,160,160,0.0);transition:border-color 0.3s;z-index:3;pointer-events:none;}
+.gallery-item:hover .gallery-item-border{border-color:rgba(160,160,160,0.3);}
+
+/* ── WHY ── */
+#why{background:var(--surface);}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 88px;}
+@media(max-width:768px){.why-grid{grid-template-columns:1fr;}}
+.why-item{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid rgba(160,160,160,0.07);}
+.why-item:last-child,.why-item:nth-child(even):last-child{border-bottom:none;}
+@media(min-width:769px){.why-item:nth-last-child(-n+2){border-bottom:none;}}
+.why-num{font-family:'Bebas Neue',sans-serif;font-size:18px;line-height:1.4;color:var(--red);min-width:28px;flex-shrink:0;opacity:0.85;}
+
+/* ── REVIEWS ── */
+#reviews{background:var(--black);overflow:hidden;}
+.review-track{display:flex;gap:24px;transition:transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);}
+.review-card{flex:0 0 calc(100%);background:var(--graphite);border:1px solid rgba(160,160,160,0.1);border-radius:2px;padding:32px;position:relative;overflow:hidden;}
+.review-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--silver-dim),transparent);}
+@media(min-width:768px){.review-card{flex:0 0 calc(50% - 12px);}}
+@media(min-width:1024px){.review-card{flex:0 0 calc(33.333% - 16px);}}
+.stars{color:#F5C518;font-size:16px;letter-spacing:2px;}
+.review-quote{font-size:72px;font-family:'EB Garamond',serif;color:rgba(139,26,26,0.15);line-height:1;position:absolute;top:12px;right:20px;}
+
+/* ── PRICING ── */
+#pricing{background:var(--surface);}
+.price-row{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.price-row:last-of-type{border-bottom:none;}
+.price-amount{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--silver-light);}
+.price-name{font-family:'Oswald',sans-serif;font-size:15px;color:var(--white);}
+.price-card{background:var(--graphite);border:1px solid rgba(160,160,160,0.08);border-radius:2px;padding:32px;transition:border-color 0.2s;}
+.price-card:hover{border-color:rgba(160,160,160,0.25);}
+.price-card.featured{border-color:var(--red);box-shadow:0 0 60px rgba(139,26,26,0.15);}
+.price-head{font-family:'Oswald',sans-serif;font-size:18px;letter-spacing:0.08em;color:var(--silver-light);padding-bottom:14px;border-bottom:1px solid rgba(160,160,160,0.12);margin-bottom:20px;}
+
+/* ── FAQ ── */
+#faq{background:var(--black);}
+.faq-item{border-bottom:1px solid rgba(160,160,160,0.1);}
+.faq-btn{width:100%;text-align:left;background:none;border:none;color:var(--white);font-family:'Oswald',sans-serif;font-size:17px;padding:20px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;letter-spacing:0.03em;transition:color 0.2s;}
+.faq-btn:hover{color:var(--silver-light);}
+.faq-icon{color:var(--silver);font-size:20px;flex-shrink:0;transition:transform 0.3s;}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s;}
+.faq-answer.open{max-height:300px;padding-bottom:20px;}
+.faq-answer p{color:var(--silver-dim);font-size:15px;line-height:1.75;}
+.faq-icon.open{transform:rotate(45deg);}
+
+/* ── CONTACT ── */
+#contact{background:var(--surface);}
+.contact-input{width:100%;background:rgba(255,255,255,0.03);border:1px solid rgba(160,160,160,0.15);border-radius:1px;padding:14px 16px;color:var(--white);font-family:'Barlow',sans-serif;font-size:15px;outline:none;transition:border-color 0.2s;}
+.contact-input:focus{border-color:var(--red-bright);}
+.contact-input::placeholder{color:rgba(160,160,160,0.4);}
+.info-icon{width:40px;height:40px;background:rgba(139,26,26,0.15);border:1px solid rgba(139,26,26,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;}
+.hours-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:14px;}
+.hours-row:last-child{border-bottom:none;}
+.map-wrap{border-radius:2px;overflow:hidden;border:1px solid rgba(160,160,160,0.1);}
+
+/* ── FOOTER ── */
+footer{background:var(--black);border-top:1px solid rgba(160,160,160,0.1);}
+
+/* ── CUT SECTIONS ── */
+.cut-card{position:relative;overflow:hidden;border-radius:2px;aspect-ratio:3/4;}
+.cut-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;filter:saturate(0.75);}
+.cut-card:hover img{transform:scale(1.06);filter:saturate(1);}
+.cut-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,0.8) 0%,transparent 55%);}
+.cut-card-label{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:16px 14px;}
+.cut-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+@media(max-width:640px){.cut-grid{grid-template-columns:1fr 1fr;}.cut-grid .featured-cut{grid-column:1/-1;}}
+
+/* ── MOBILE ── */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+.desktop-nav{display:flex;}
+@media(max-width:1024px){.hamburger{display:flex;}.desktop-nav{display:none;}}
+.hamburger span{width:24px;height:2px;background:var(--white);transition:transform 0.3s,opacity 0.3s;display:block;}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(8,8,8,0.98);border-bottom:1px solid rgba(160,160,160,0.15);padding:24px;z-index:99;}
+.mobile-menu.open{display:flex;flex-direction:column;gap:20px;}
+.mobile-menu .nav-link{font-size:18px;}
+.mobile-cta{position:fixed;bottom:0;left:0;right:0;z-index:99;padding:12px 16px;background:rgba(8,8,8,0.97);border-top:1px solid rgba(139,26,26,0.3);backdrop-filter:blur(10px);display:flex;gap:10px;}
+@media(min-width:768px){.mobile-cta{display:none;}}
+.wa-float{position:fixed;bottom:80px;right:20px;z-index:98;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.2s,box-shadow 0.2s;cursor:pointer;text-decoration:none;}
+@media(min-width:768px){.wa-float{bottom:30px;right:30px;}}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.5);}
+.ig-float{position:fixed;bottom:140px;right:20px;z-index:98;width:52px;height:52px;background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(214,36,159,0.4);transition:transform 0.2s,box-shadow 0.2s;cursor:pointer;text-decoration:none;}
+@media(min-width:768px){.ig-float{bottom:96px;right:30px;}.wa-float{bottom:30px;right:30px;}}
+.ig-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(214,36,159,0.55);}
+
+/* ══ DESKTOP OPTIMIZATIONS ══ */
+@media(min-width:768px){
+  /* Nav logo: proper size on desktop */
+  .nav-logo{height:80px;}
+
+  /* Float buttons: smaller and less intrusive on desktop */
+  .wa-float{width:46px;height:46px;bottom:32px;right:32px;}
+  .ig-float{width:46px;height:46px;bottom:90px;right:32px;}
+
+  /* Services grid: better desktop layout */
+  .service-card{padding:28px 24px;}
+
+  /* About image: taller on desktop */
+  .about-img img{height:520px;}
+
+  /* Gallery: 3 columns on desktop */
+  .gallery-grid{columns:3;gap:10px;}
+
+  /* Proof bar: 4 columns on desktop */
+  #proof .proof-bar-inner{grid-template-columns:repeat(4,1fr)!important;}
+}
+
+/* ── ANIMATIONS ── */
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+.fade-in{opacity:0;transition:opacity 0.8s ease;}
+.fade-in.visible{opacity:1;}
+.stagger-1{transition-delay:0.1s;}
+.stagger-2{transition-delay:0.2s;}
+.stagger-3{transition-delay:0.3s;}
+.stagger-4{transition-delay:0.4s;}
+.stagger-5{transition-delay:0.5s;}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--black);}
+::-webkit-scrollbar-thumb{background:var(--red);border-radius:3px;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){.about-grid{grid-template-columns:1fr!important;gap:40px!important;}.about-grid>div:last-child{order:-1;}}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr!important;}}
+
+/* ── VINTAGE SECTION HEADING ── */
+.vintage-heading{font-family:'EB Garamond',serif;font-style:italic;color:var(--silver-light);}
+.section-heading{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:0.03em;color:var(--white);}
+.accent-red{color:var(--silver-light);}
+
+/* ── CONTACT MOBILE ── */
+@media(max-width:767px){.contact-cta-btns{display:none!important;}#contact{padding-bottom:100px;}}
+
+/* ══ MOBILE OPTIMIZATIONS ══ */
+@media(max-width:767px){
+  /* Nav logo: tuck back inside bar on mobile */
+  .nav-logo{height:80px;}
+
+  /* Mobile menu clears the logo */
+  .mobile-menu{top:68px;}
+
+  /* Hero: full-width CTA buttons */
+  .hero-cta-wrap{flex-direction:column!important;gap:10px!important;}
+  .hero-cta-wrap a{width:auto;min-width:180px;max-width:260px;text-align:center;padding-top:9px!important;padding-bottom:9px!important;padding-left:24px!important;padding-right:24px!important;}
+
+  /* Proof: smaller numbers so 2-col fits */
+  .proof-num{font-size:38px;}
+  .proof-item{padding:24px 8px;}
+
+  /* About image: not so tall */
+  .about-img img{height:260px;}
+
+  /* Services tab buttons: full-width row, scrollable */
+  .tab-btn-row{overflow-x:auto;-webkit-overflow-scrolling:touch;flex-wrap:nowrap!important;padding-bottom:4px;justify-content:flex-start!important;}
+  .tab-btn{flex-shrink:0;padding:12px 18px;min-height:44px;}
+
+  /* Gallery: tighter gap */
+  .gallery-grid{gap:4px;}
+  .gallery-item{margin-bottom:4px;}
+
+  /* Section padding: less breathing room */
+  .section-pad{padding:52px 0;}
+
+  /* FAQ button: bigger touch target */
+  .faq-btn{padding:18px 0;font-size:15px;}
+
+  /* Inputs: 16px prevents iOS auto-zoom */
+  .contact-input{font-size:16px;}
+  select,.contact-input{font-size:16px;}
+
+  /* Footer logo: same 53% position as nav logo */
+  .footer-logo-block{width:100%;text-align:center;position:relative;left:3%;}
+  .footer-logo-block img{margin-left:0!important;}
+
+  /* Float buttons: clear mobile CTA bar */
+  .wa-float{bottom:84px;right:14px;width:48px;height:48px;}
+  .ig-float{bottom:142px;right:14px;width:48px;height:48px;}
+
+  /* Footer: stack and center */
+  footer > div > div:nth-child(2){flex-direction:column;align-items:flex-start;gap:16px;}
+  footer img.nav-logo{height:80px;}
+
+  /* Cut grid: 2-col on mobile */
+  .cut-grid{grid-template-columns:1fr 1fr;gap:6px;}
+  .cut-card{aspect-ratio:4/5;}
+
+  /* Hero logo on mobile */
+  .hero-logo-bg{top:29%;width:50%;max-width:none;}
+
+  /* Nav logo: centered on mobile relative to full viewport */
+  .nav-logo-link{position:fixed;left:53%;transform:translateX(-50%);z-index:101;}
+
+  /* Hamburger: push to right corner */
+  .hamburger{margin-left:auto;}
+
+  /* CTA buttons: centered */
+  .hero-cta-wrap{align-items:center!important;}
+
+  /* Barber poles: slimmer */
+  .barber-pole{width:7px!important;}
+}
+
+/* ── EASING TOKENS ── */
+:root{
+  --ease-out-expo:  cubic-bezier(0.16,1,0.3,1);
+  --ease-out-quint: cubic-bezier(0.22,1,0.36,1);
+}
+
+/* ── HERO ENTRANCE ── */
+@keyframes hero-up{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+@keyframes hero-img-in{from{opacity:0;transform:translate(-50%,-50%) scale(1.05);}to{opacity:0.65;transform:translate(-50%,-50%) scale(1);}}
+.hero-enter{opacity:0;animation:hero-up 0.75s var(--ease-out-expo) forwards;text-shadow:0 2px 16px rgba(0,0,0,0.85),0 1px 4px rgba(0,0,0,0.7);}
+.hero-enter-1{animation-delay:0.30s;}
+.hero-enter-2{animation-delay:0.55s;}
+.hero-enter-3{animation-delay:0.75s;}
+.hero-enter-4{animation-delay:0.95s;}
+
+/* ── BARBER POLE SCROLL ── */
+@keyframes pole-march{from{background-position:0 0;}to{background-position:0 51px;}}
+.pole-animated{animation:pole-march 2.8s linear infinite;}
+
+/* ── SCROLL INDICATOR ── */
+@keyframes scroll-drop{0%,100%{opacity:0.35;transform:translateY(0);}55%{opacity:1;transform:translateY(9px);}}
+
+/* ── SECTION HEADING WIPE ── */
+.section-heading.fade-up{opacity:1!important;transform:none!important;clip-path:inset(0 100% 0 0);transition:clip-path 0.85s var(--ease-out-quint)!important;}
+.section-heading.fade-up.visible{clip-path:inset(0 0% 0 0);}
+
+/* ── MOBILE CTA PULSE ── */
+@keyframes cta-pulse-once{0%,100%{box-shadow:0 0 0 0 rgba(180,30,30,0);}40%{box-shadow:0 0 0 14px rgba(180,30,30,0.35);}}
+.cta-pulse{animation:cta-pulse-once 1.4s var(--ease-out-expo) 1.8s 2;}
+
+/* ── FOCUS VISIBLE ── */
+.nav-link:focus-visible,.btn-red:focus-visible,.btn-silver:focus-visible,.tab-btn:focus-visible,.faq-btn:focus-visible{outline:2px solid var(--red-bright);outline-offset:3px;}
+
+/* ── REDUCED MOTION ── */
+@media(prefers-reduced-motion:reduce){
+  *{transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important;}
+  .fade-up,.fade-in{opacity:1;transform:none;}
+  .hero-enter{opacity:1;}
+  .hero-logo-bg{animation:none!important;opacity:0.65;transform:translate(-50%,-50%);}
+  .section-heading.fade-up{clip-path:none!important;}
+}
+/* ── SCROLL PROGRESS ── */
+#scroll-progress{position:fixed;top:0;left:0;height:2px;background:var(--red);z-index:1001;pointer-events:none;width:0%;transition:width 0.06s linear;}
+
+/* ── TAB TRANSITION (handled via JS) ── */
+
+/* ── STAR GLOW ── */
+@keyframes star-glow{0%,100%{filter:none;text-shadow:none;}50%{filter:brightness(1.3);text-shadow:0 0 18px rgba(245,197,24,0.65);}}
+.hero-stars{display:inline-block;animation:star-glow 2.8s ease-in-out 1.8s 3;}
+
+/* ── FORM SUCCESS ── */
+@keyframes check-draw{from{stroke-dashoffset:60;}to{stroke-dashoffset:0;}}
+.success-check{stroke-dasharray:60;stroke-dashoffset:60;animation:check-draw 0.6s var(--ease-out-expo) 0.2s forwards;}
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<!-- ══ NAV ══ -->
+<nav id="navbar">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;position:relative;">
+    <a href="#hero" class="nav-logo-link" style="display:flex;align-items:center;text-decoration:none;">
+      <img src="Logo%20.png" alt="Momo Barber" class="nav-logo" onerror="this.style.display='none'"/>
+    </a>
+    <div class="desktop-nav" style="align-items:center;gap:32px;">
+      <a href="#about" class="nav-link">Über uns</a>
+      <a href="#services" class="nav-link">Leistungen</a>
+      <a href="#gallery" class="nav-link">Galerie</a>
+      <a href="#contact" class="nav-link">Kontakt</a>
+      <a href="tel:06765992433" class="btn-red" style="padding:11px 20px;font-size:13px;">Jetzt buchen</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" class="nav-link" onclick="toggleMenu()">Über uns</a>
+  <a href="#services" class="nav-link" onclick="toggleMenu()">Leistungen</a>
+  <a href="#gallery" class="nav-link" onclick="toggleMenu()">Galerie</a>
+  <a href="#faq" class="nav-link" onclick="toggleMenu()">FAQ</a>
+  <a href="#contact" class="nav-link" onclick="toggleMenu()">Kontakt</a>
+  <a href="tel:06765992433" class="btn-red" style="text-align:center;">Jetzt anrufen — 0676 5992433</a>
+</div>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-bg">
+    <img src="ChatGPT%20Image%2027.%20Mai%202026%2C%2019_27_37.png" alt="" class="hero-photo-bg"/>
+    <img src="Logo%20.png" alt="" class="hero-logo-bg" draggable="false"/>
+  </div>
+  <div class="hero-vignette"></div>
+  <div class="hero-spotlight"></div>
+
+  <div style="position:relative;z-index:2;width:100%;max-width:880px;padding:0 24px;margin:0 auto;display:flex;flex-direction:column;min-height:100vh;">
+
+    <!-- TOP: text sits right below navbar -->
+    <div class="hero-tagline-wrap" style="padding-top:96px;text-align:center;">
+      <p id="hero-tagline" class="hero-enter hero-enter-1" style="font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4.8vw,54px);color:rgba(220,212,200,0.82);letter-spacing:0.1em;text-transform:uppercase;line-height:1.2;">
+        Präzise Schnitte. Saubere Fades.
+      </p>
+    </div>
+
+    <!-- BOTTOM: everything pushed to bottom, logo fully clear in middle -->
+    <div style="margin-top:auto;padding-bottom:110px;text-align:center;">
+
+      <div class="hero-enter hero-enter-2" style="display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:32px;">
+        <div style="height:1px;width:60px;background:linear-gradient(90deg,transparent,var(--silver-light));"></div>
+        <span style="font-family:'Barlow',sans-serif;font-size:12px;letter-spacing:0.28em;color:var(--silver-light);text-transform:uppercase;font-weight:400;">Vienna · Floridsdorf · 1210</span>
+        <div style="height:1px;width:60px;background:linear-gradient(90deg,var(--silver-light),transparent);"></div>
+      </div>
+
+      <div class="hero-enter hero-enter-3 hero-cta-wrap" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:32px;">
+        <a href="tel:06765992433" class="btn-red" style="font-size:14px;padding:14px 36px;">Jetzt anrufen</a>
+        <a href="#services" class="btn-silver" style="font-size:14px;padding:14px 36px;background:#555f68;border-color:#555f68;color:var(--white);" onmouseover="this.style.background='#64707a';this.style.borderColor='#64707a'" onmouseout="this.style.background='#555f68';this.style.borderColor='#555f68'">Leistungen ansehen</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- scroll indicator -->
+  <div style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;">
+    <span style="font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:0.22em;color:var(--silver-dim);text-transform:uppercase;opacity:0.6;">Scrollen</span>
+    <div style="width:1px;height:36px;background:linear-gradient(to bottom,var(--red-bright),transparent);animation:scroll-drop 2s var(--ease-out-quint) 1.4s infinite;"></div>
+  </div>
+</section>
+
+<!-- ══ SECTION DIVIDER ══ -->
+<div style="background:var(--surface);padding:0;display:flex;align-items:center;">
+  <div style="flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(139,26,26,0.5));"></div>
+  <svg width="60" height="22" viewBox="0 0 100 38" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:10px 20px;opacity:0.4;">
+    <path d="M50 22 C44 14 32 8 20 12 C10 16 6 26 12 30 C18 34 28 26 34 20 C38 16 44 14 50 22 C56 14 62 16 66 20 C72 26 82 34 88 30 C94 26 90 16 80 12 C68 8 56 14 50 22Z" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  </svg>
+  <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(139,26,26,0.5),transparent);"></div>
+</div>
+
+<!-- ══ SOCIAL PROOF ══ -->
+<section id="proof">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0;" class="sm:grid-cols-4">
+      <div class="proof-item fade-up">
+        <div class="proof-num proof-red" data-count="4.7" data-decimals="1">4,7</div>
+        <div class="proof-label">★ Google Bewertung</div>
+      </div>
+      <div class="proof-item fade-up stagger-1">
+        <div class="proof-num" data-count="2000" data-suffix="+">2000+</div>
+        <div class="proof-label">Haarschnitte</div>
+      </div>
+      <div class="proof-item fade-up stagger-2">
+        <div class="proof-num" data-count="5" data-suffix="+">5+</div>
+        <div class="proof-label">Jahre Erfahrung</div>
+      </div>
+      <div class="proof-item fade-up stagger-3">
+        <div class="proof-num">#1</div>
+        <div class="proof-label">Barbier in 1210</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section id="about" class="section-pad">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;" class="about-grid">
+      <div>
+        <div class="section-badge fade-up"><span>Unsere Geschichte</span></div>
+        <h2 class="section-heading fade-up" style="font-size:clamp(34px,4.5vw,54px);line-height:1.08;margin-bottom:10px;">
+          Wiens <span class="accent-red">Vertrauenswürdigster</span> Barbier
+        </h2>
+        <p class="font-serif fade-up stagger-1" style="font-size:16px;color:var(--silver);font-style:italic;margin-bottom:20px;line-height:1.7;">
+          Mehr als ein Haarschnitt — ein Vertrauens-Reset.
+        </p>
+        <p class="fade-up stagger-1" style="color:var(--silver-dim);font-size:15px;line-height:1.8;margin-bottom:18px;">
+          Bei Momo Barber glauben wir, dass ein guter Haarschnitt mehr ist als nur ein Trim. Mitten im Herzen von Floridsdorf in der Prager Str. 49 haben wir uns einen Ruf als die erste Anlaufstelle für präzise Fades, scharfe Linien und saubere Bartarbeit im gesamten 1210 Wien aufgebaut.
+        </p>
+        <p class="fade-up stagger-2" style="color:var(--silver-dim);font-size:15px;line-height:1.8;margin-bottom:32px;">
+          Unsere Barbiere verbinden traditionelle Technik mit modernem Stil — egal ob klassischer Taper, ein perfekt gemischter Skin Fade oder ein Bartsculpt, der Ihr Gesicht rahmt. Jeder Kunde bekommt unsere volle Aufmerksamkeit. Kein Hetzen. Keine Abkürzungen.
+        </p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;" class="fade-up stagger-3">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div class="bullet-dot"></div>
+            <span style="font-size:14px;color:var(--white);font-family:'Oswald',sans-serif;letter-spacing:0.05em;">Fade-Spezialisten</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div class="bullet-dot"></div>
+            <span style="font-size:14px;color:var(--white);font-family:'Oswald',sans-serif;letter-spacing:0.05em;">Bartformung</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div class="bullet-dot"></div>
+            <span style="font-size:14px;color:var(--white);font-family:'Oswald',sans-serif;letter-spacing:0.05em;">Kinder willkommen</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div class="bullet-dot"></div>
+            <span style="font-size:14px;color:var(--white);font-family:'Oswald',sans-serif;letter-spacing:0.05em;">Walk-Ins willkommen</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-img fade-up stagger-1">
+        <img src="Barber%20des%20vertrauens.png" alt="Momo Barber Wien"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MEN'S CUTS ══ -->
+<section style="background:var(--surface);padding:80px 0 0;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="text-align:center;margin-bottom:48px;">
+      <h2 class="section-heading fade-up" style="font-size:clamp(30px,4vw,46px);">Herren <span class="accent-red">Haarschnitte</span></h2>
+    </div>
+    <div class="cut-grid">
+      <div class="cut-card featured-cut fade-up">
+        <img src="herren%20cut%201.png" alt="Men's haircut Vienna fade" loading="lazy"/>
+      </div>
+      <div class="cut-card fade-up stagger-1">
+        <img src="herrencut%204.png" alt="Men's fade barber Wien" loading="lazy"/>
+      </div>
+      <div class="cut-card fade-up stagger-2">
+        <img src="herren%20cut%203.png" alt="Modern men's haircut Vienna" loading="lazy"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ KIDS CUTS ══ -->
+<section style="background:var(--graphite);padding:80px 0;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="text-align:center;margin-bottom:48px;">
+      <h2 class="section-heading fade-up" style="font-size:clamp(30px,4vw,46px);">Kinder <span class="accent-red">Haarschnitte</span></h2>
+    </div>
+    <div class="cut-grid">
+      <div class="cut-card fade-up">
+        <img src="childre cut 1.png" alt="Kids haircut Vienna" loading="lazy"/>
+      </div>
+      <div class="cut-card fade-up stagger-1">
+        <img src="children cut 3.png" alt="Kids hair design pattern Vienna" loading="lazy"/>
+      </div>
+      <div class="cut-card featured-cut fade-up stagger-2">
+        <img src="childerns%20cut%202.png" alt="Children's fade haircut Wien" loading="lazy"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══ -->
+<section id="services" class="section-pad">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="text-align:center;margin-bottom:48px;">
+      <div class="section-badge fade-up" style="justify-content:center;"><span>Was wir machen</span></div>
+      <h2 class="section-heading fade-up" style="font-size:clamp(30px,4vw,46px);">Unsere <span class="accent-red">Leistungen</span></h2>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:40px;" class="fade-up tab-btn-row">
+      <button class="tab-btn active" onclick="switchTab('haircuts',this)">Haarschnitte</button>
+      <button class="tab-btn" onclick="switchTab('beard',this)">Bart & Gesicht</button>
+      <button class="tab-btn" onclick="switchTab('kids',this)">Kinder</button>
+      <button class="tab-btn" onclick="switchTab('package',this)">Komplett-Paket</button>
+    </div>
+
+    <!-- Haircuts -->
+    <div id="tab-haircuts" class="tab-content active" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;">
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg width="20" height="20" fill="none" stroke="#B01E1E" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l1.5 1.5M18 18l-1.5-1.5M6.5 11.5A2.5 2.5 0 009 9a2.5 2.5 0 00-2.5 2.5zm11 0A2.5 2.5 0 0015 9a2.5 2.5 0 002.5 2.5z"/></svg></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+          <h3 class="font-heading" style="font-size:17px;letter-spacing:0.04em;">Maschinenschnitt</h3>
+          <span class="price-tag">€15</span>
+        </div>
+        <p style="font-size:13px;color:var(--silver-dim);line-height:1.6;margin-bottom:16px;">Sauber. Präzise. Schnell — genau so wie es sein soll.</p>
+        <a href="tel:06765992433" class="btn-silver" style="font-size:14px;padding:11px 20px;">Jetzt buchen</a>
+      </div>
+      <div class="service-card fade-up stagger-1">
+        <div class="service-icon"><svg width="20" height="20" fill="none" stroke="#B01E1E" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l1.5 1.5M18 18l-1.5-1.5M6.5 11.5A2.5 2.5 0 009 9a2.5 2.5 0 00-2.5 2.5zm11 0A2.5 2.5 0 0015 9a2.5 2.5 0 002.5 2.5z"/></svg></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+          <h3 class="font-heading" style="font-size:17px;letter-spacing:0.04em;">Standardschnitt</h3>
+          <span class="price-tag">€19</span>
+        </div>
+        <p style="font-size:13px;color:var(--silver-dim);line-height:1.6;margin-bottom:16px;">Schere und Maschine. Dein Look, deine Regeln.</p>
+        <a href="tel:06765992433" class="btn-silver" style="font-size:14px;padding:11px 20px;">Jetzt buchen</a>
+      </div>
+      <div class="service-card fade-up stagger-2">
+        <div class="service-icon"><svg width="20" height="20" fill="none" stroke="#B01E1E" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l1.5 1.5M18 18l-1.5-1.5M6.5 11.5A2.5 2.5 0 009 9a2.5 2.5 0 00-2.5 2.5zm11 0A2.5 2.5 0 0015 9a2.5 2.5 0 002.5 2.5z"/></svg></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+          <h3 class="font-heading" style="font-size:17px;letter-spacing:0.04em;">Skin / Zero Fade</h3>
+          <span class="price-tag">€21</span>
+        </div>
+        <p style="font-size:13px;color:var(--silver-dim);line-height:1.6;margin-bottom:16px;">Unser Markenzeichen. Null sichtbare Linien — hält wochenlang.</p>
+        <a href="tel:06765992433" class="btn-silver" style="font-size:14px;padding:11px 20px;">Jetzt buchen</a>
+      </div>
+      <div class="service-card fade-up stagger-3">
+        <div class="service-icon"><svg width="20" height="20" fill="none" stroke="#B01E1E" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 20c0-3.314 2.686-6 6-6s6 2.686 6 6"/></svg></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+          <h3 class="font-heading" style="font-size:17px;letter-spacing:0.04em;">Waschen & Schneiden</h3>
+          <span class="price-tag">€23</span>
+        </div>
+        <p style="font-size:13px;color:var(--silver-dim);line-height:1.6;margin-bottom:16px;">Waschen, pflegen, schneiden — alles in einer Session.</p>
+        <a href="tel:06765992433" class="btn-silver" style="font-size:14px;padding:11px 20px;">Jetzt buchen</a>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg width="20" height="20" fill="none" stroke="#B01E1E" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2"/></svg></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+          <h3 class="font-heading" style="font-size:17px;letter-spacing:0.04em;">Individueller Fade</h3>
+          <span class="price-tag">€24</span>
+        </div>
+        <p style="font-size:13px;color:var(--silver-dim);line-height:1.6;margin-bottom:16px;">Dein Bild, unser Handwerk. Beratung inklusive.</p>
+        <a href="tel:06765992433" class="btn-silver" style="font-size:14px;padding:11px 20px;">Jetzt buchen</a>
+      </div>
+      <div class="service-card fade-up stagger-1">
+        <div class="service-icon"><svg width="20" height="20" fill="none" stroke="#B01E1E" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><path d="M12 8v14m-5-5l5 5 5-5"/></svg></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+          <h3 class="font-heading" style="font-size:17px;letter-spacing:0.04em;">Kopfrasur</h3>
+          <span class="price-tag">€17</span>
+        </div>
+        <p style="font-size:13px;color:var(--silver-dim);line-height:1.6;margin-bottom:16px;">Heißtuch, Klinge, fertig — glatt und sauber.</p>
+        <a href="tel:06765992433" class="btn-silver" style="font-size:14px;padding:11px 20px;">Jetzt buchen</a>
+      </div>
+      <div class="service-card fade-up stagger-2">
+        <div class="service-icon"><svg width="20" height="20" fill="none" stroke="#B01E1E" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7"/></svg></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+          <h3 class="font-heading" style="font-size:17px;letter-spacing:0.04em;">Langhaarschnitt</h3>
+          <span class="price-tag">€25</span>
+        </div>
+        <p style="font-size:13px;color:var(--silver-dim);line-height:1.6;margin-bottom:16px;">Mehr Fluss, weniger Volumen. Sauber geformt.</p>
+        <a href="tel:06765992433" class="btn-silver" style="font-size:14px;padding:11px 20px;">Jetzt buchen</a>
+      </div>
+    </div>
+
+    <!-- Beard -->
+    <div id="tab-beard" class="tab-content" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;">
+      <div class="service-card fade-up">
+        <div class="service-icon"><span style="font-size:20px;color:var(--red-mid);">✦</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+          <h3 class="font-heading" style="font-size:17px;letter-spacing:0.04em;">Modellbart</h3>
+          <span class="price-tag">€13</span>
+        </div>
+        <p style="font-size:13px;color:var(--silver-dim);line-height:1.6;margin-bottom:16px;">Geformt, konturiert und detailliert, um Ihr Gesicht präzise zu rahmen.</p>
+        <a href="tel:06765992433" class="btn-silver" style="font-size:14px;padding:11px 20px;">Jetzt buchen</a>
+      </div>
+      <div class="service-card fade-up stagger-1">
+        <div class="service-icon"><span style="font-size:20px;color:var(--red-mid);">✂</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+          <h3 class="font-heading" style="font-size:17px;letter-spacing:0.04em;">Bartrasur</h3>
+          <span class="price-tag">€10</span>
+        </div>
+        <p style="font-size:13px;color:var(--silver-dim);line-height:1.6;margin-bottom:16px;">Traditionelle Rasierklinge-Rasur. Sauber, nah, erfrischend.</p>
+        <a href="tel:06765992433" class="btn-silver" style="font-size:14px;padding:11px 20px;">Jetzt buchen</a>
+      </div>
+      <div class="service-card fade-up stagger-2">
+        <div class="service-icon"><span style="font-size:20px;color:var(--red-mid);">✁</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+          <h3 class="font-heading" style="font-size:17px;letter-spacing:0.04em;">Barttrimmen</h3>
+          <span class="price-tag">€8</span>
+        </div>
+        <p style="font-size:13px;color:var(--silver-dim);line-height:1.6;margin-bottom:16px;">Gepflegt bleiben. Schnelle Aufräum-Pflege, um Ihre Bartform zu erhalten.</p>
+        <a href="tel:06765992433" class="btn-silver" style="font-size:14px;padding:11px 20px;">Jetzt buchen</a>
+      </div>
+      <div class="service-card fade-up stagger-3">
+        <div class="service-icon"><span style="font-size:20px;color:var(--red-mid);">◈</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+          <h3 class="font-heading" style="font-size:17px;letter-spacing:0.04em;">Augenbrauen</h3>
+          <span class="price-tag">€6</span>
+        </div>
+        <p style="font-size:13px;color:var(--silver-dim);line-height:1.6;margin-bottom:16px;">Geformt und gepflegt für ein poliertes, scharfes Erscheinungsbild.</p>
+        <a href="tel:06765992433" class="btn-silver" style="font-size:14px;padding:11px 20px;">Jetzt buchen</a>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><span style="font-size:20px;color:var(--red-mid);">◇</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+          <h3 class="font-heading" style="font-size:17px;letter-spacing:0.04em;">Gesichtshaarentfernung</h3>
+          <span class="price-tag">€7</span>
+        </div>
+        <p style="font-size:13px;color:var(--silver-dim);line-height:1.6;margin-bottom:16px;">Saubere Entfernung unerwünschter Gesichtshaare. Glatt und präzise.</p>
+        <a href="tel:06765992433" class="btn-silver" style="font-size:14px;padding:11px 20px;">Jetzt buchen</a>
+      </div>
+    </div>
+
+    <!-- Kids -->
+    <div id="tab-kids" class="tab-content" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;">
+      <div class="service-card fade-up">
+        <div class="service-icon"><span style="font-size:20px;color:var(--red-mid);">★</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+          <h3 class="font-heading" style="font-size:17px;letter-spacing:0.04em;">Kinder Standardschnitt</h3>
+          <span class="price-tag">€15</span>
+        </div>
+        <p style="font-size:13px;color:var(--silver-dim);line-height:1.6;margin-bottom:16px;">Geduldiges und spaßiges Erlebnis für die Kleinen. Klassischer Schnitt, perfekt ausgeführt.</p>
+        <a href="tel:06765992433" class="btn-silver" style="font-size:14px;padding:11px 20px;">Jetzt buchen</a>
+      </div>
+      <div class="service-card fade-up stagger-1">
+        <div class="service-icon"><span style="font-size:20px;color:var(--red-mid);">⚡</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+          <h3 class="font-heading" style="font-size:17px;letter-spacing:0.04em;">Kinder Fade</h3>
+          <span class="price-tag">€18</span>
+        </div>
+        <p style="font-size:13px;color:var(--silver-dim);line-height:1.6;margin-bottom:16px;">Scharfer Fade im aktuellen Trend-Stil der Kids.</p>
+        <a href="tel:06765992433" class="btn-silver" style="font-size:14px;padding:11px 20px;">Jetzt buchen</a>
+      </div>
+      <div class="service-card fade-up stagger-2">
+        <div class="service-icon"><span style="font-size:20px;color:var(--red-mid);">✦</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
+          <h3 class="font-heading" style="font-size:17px;letter-spacing:0.04em;">Haar-Design / Muster</h3>
+          <span class="price-tag">€5</span>
+        </div>
+        <p style="font-size:13px;color:var(--silver-dim);line-height:1.6;margin-bottom:16px;">Individuell eingeschnittenes Design oder Muster, um ihren Look einzigartig zu machen.</p>
+        <a href="tel:06765992433" class="btn-silver" style="font-size:14px;padding:11px 20px;">Jetzt buchen</a>
+      </div>
+    </div>
+
+    <!-- Package -->
+    <div id="tab-package" class="tab-content" style="grid-template-columns:1fr;gap:16px;max-width:580px;margin:0 auto;">
+      <div class="service-card fade-up" style="border-color:var(--red);text-align:center;padding:48px 32px;box-shadow:0 0 80px rgba(139,26,26,0.2);">
+        <div style="width:64px;height:64px;background:rgba(139,26,26,0.15);border:1px solid rgba(139,26,26,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:28px;">👑</div>
+        <span style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:0.22em;color:var(--red-bright);text-transform:uppercase;">Beliebteste Wahl</span>
+        <h3 class="font-heading" style="font-size:26px;letter-spacing:0.04em;margin:12px 0 8px;color:var(--white);">Komplett-Pflege-Paket</h3>
+        <div class="font-display chrome-text" style="font-size:80px;line-height:1;margin-bottom:16px;">€42</div>
+        <p style="color:var(--silver-dim);font-size:15px;line-height:1.7;margin-bottom:32px;">Alles, was Sie in einer Sitzung brauchen. Hereinkommen, vollständig verwandelt herausgehen.</p>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px;text-align:left;max-width:300px;margin-left:auto;margin-right:auto;">
+          <div style="display:flex;align-items:center;gap:10px;"><div class="bullet-dot"></div><span style="font-size:14px;color:var(--white);">Waschen</span></div>
+          <div style="display:flex;align-items:center;gap:10px;"><div class="bullet-dot"></div><span style="font-size:14px;color:var(--white);">Haarschnitt</span></div>
+          <div style="display:flex;align-items:center;gap:10px;"><div class="bullet-dot"></div><span style="font-size:14px;color:var(--white);">Bartpflege</span></div>
+          <div style="display:flex;align-items:center;gap:10px;"><div class="bullet-dot"></div><span style="font-size:14px;color:var(--white);">Augenbrauen</span></div>
+          <div style="display:flex;align-items:center;gap:10px;"><div class="bullet-dot"></div><span style="font-size:14px;color:var(--white);">Waxing</span></div>
+        </div>
+        <a href="tel:06765992433" class="btn-red" style="font-size:14px;padding:14px 40px;">Komplett-Paket buchen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GALLERY ══ -->
+<section id="gallery" class="section-pad" style="background:var(--black);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="text-align:center;margin-bottom:48px;">
+      <h2 class="section-heading fade-up" style="font-size:clamp(30px,4vw,46px);">Frische Schnitte. <span class="accent-red">Echte Kunden.</span></h2>
+      <p class="fade-up stagger-1" style="color:var(--silver-dim);font-size:14px;margin-top:12px;">Neueste Verwandlungen vom Stuhl</p>
+    </div>
+    <div class="gallery-grid fade-in">
+      <div class="gallery-item"><img src="barber%202.png" alt="" loading="lazy"/><div class="gallery-item-border"></div></div>
+      <div class="gallery-item"><img src="barber%203.png" alt="" loading="lazy"/><div class="gallery-item-border"></div></div>
+      <div class="gallery-item"><img src="barber%207.png" alt="" loading="lazy"/><div class="gallery-item-border"></div></div>
+      <div class="gallery-item"><img src="barber%208.png" alt="" loading="lazy"/><div class="gallery-item-border"></div></div>
+      <div class="gallery-item"><img src="barber%2011.png" alt="" loading="lazy"/><div class="gallery-item-border"></div></div>
+      <div class="gallery-item"><img src="barber%2012.png" alt="" loading="lazy"/><div class="gallery-item-border"></div></div>
+      <div class="gallery-item"><img src="barber%2014.png" alt="" loading="lazy"/><div class="gallery-item-border"></div></div>
+      <div class="gallery-item"><img src="barber%2015.png" alt="" loading="lazy"/><div class="gallery-item-border"></div></div>
+      <div class="gallery-item"><img src="barber%2016.png" alt="" loading="lazy"/><div class="gallery-item-border"></div></div>
+      <div class="gallery-item"><img src="barber%2018.png" alt="" loading="lazy"/><div class="gallery-item-border"></div></div>
+      <div class="gallery-item"><img src="barber%2019.png" alt="" loading="lazy"/><div class="gallery-item-border"></div></div>
+    </div>
+    <div style="text-align:center;margin-top:40px;" class="fade-up">
+      <a href="https://www.instagram.com/memo_barber_und_handy_shop/" target="_blank" rel="noopener" class="btn-silver" style="font-size:13px;padding:12px 28px;display:inline-flex;align-items:center;gap:10px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        Follow @momobarber_wien
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY ══ -->
+<section id="why" class="section-pad">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="text-align:center;margin-bottom:56px;">
+      <h2 class="section-heading fade-up" style="font-size:clamp(30px,4vw,46px);">Warum Wien <span class="accent-red">uns wählt</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item fade-up">
+        <span class="why-num">01</span>
+        <div><h3 class="font-heading" style="font-size:15px;letter-spacing:0.06em;margin-bottom:6px;color:var(--white);">Präzise Fades</h3><p style="font-size:13px;color:var(--silver-dim);line-height:1.65;">Jeder Fade perfekt gemischt — von Skin bis Guard, null sichtbare Linien.</p></div>
+      </div>
+      <div class="why-item fade-up stagger-1">
+        <span class="why-num">02</span>
+        <div><h3 class="font-heading" style="font-size:15px;letter-spacing:0.06em;margin-bottom:6px;color:var(--white);">Hygienische Werkzeuge</h3><p style="font-size:13px;color:var(--silver-dim);line-height:1.65;">Sterilisierte Werkzeuge nach jedem Kunden. Ihre Gesundheit steht immer an erster Stelle.</p></div>
+      </div>
+      <div class="why-item fade-up stagger-1">
+        <span class="why-num">03</span>
+        <div><h3 class="font-heading" style="font-size:15px;letter-spacing:0.06em;margin-bottom:6px;color:var(--white);">5-Sterne-Bewertet</h3><p style="font-size:13px;color:var(--silver-dim);line-height:1.65;">Bestbewertet auf Google in Floridsdorf. Echte Bewertungen, echte Ergebnisse.</p></div>
+      </div>
+      <div class="why-item fade-up stagger-2">
+        <span class="why-num">04</span>
+        <div><h3 class="font-heading" style="font-size:15px;letter-spacing:0.06em;margin-bottom:6px;color:var(--white);">Walk-Ins willkommen</h3><p style="font-size:13px;color:var(--silver-dim);line-height:1.65;">Kein Termin nötig. Einfach hereinkommen und wir kümmern uns um Sie.</p></div>
+      </div>
+      <div class="why-item fade-up stagger-2">
+        <span class="why-num">05</span>
+        <div><h3 class="font-heading" style="font-size:15px;letter-spacing:0.06em;margin-bottom:6px;color:var(--white);">Traditionelles Handwerk</h3><p style="font-size:13px;color:var(--silver-dim);line-height:1.65;">Klassische Barbier-Techniken kombiniert mit modernen Trends und aktuellen Styles.</p></div>
+      </div>
+      <div class="why-item fade-up stagger-3">
+        <span class="why-num">06</span>
+        <div><h3 class="font-heading" style="font-size:15px;letter-spacing:0.06em;margin-bottom:6px;color:var(--white);">Kinder-Spezialisten</h3><p style="font-size:13px;color:var(--silver-dim);line-height:1.65;">Geduldige, freundliche Barbiere, die Kindern ein tolles Erlebnis bieten.</p></div>
+      </div>
+      <div class="why-item fade-up stagger-3">
+        <span class="why-num">07</span>
+        <div><h3 class="font-heading" style="font-size:15px;letter-spacing:0.06em;margin-bottom:6px;color:var(--white);">Faire Preise</h3><p style="font-size:13px;color:var(--silver-dim);line-height:1.65;">Premium-Qualität ohne das Premium-Preisschild. Bestes Preis-Leistungs-Verhältnis in 1210.</p></div>
+      </div>
+      <div class="why-item fade-up stagger-4">
+        <span class="why-num">08</span>
+        <div><h3 class="font-heading" style="font-size:15px;letter-spacing:0.06em;margin-bottom:6px;color:var(--white);">Konstante Ergebnisse</h3><p style="font-size:13px;color:var(--silver-dim);line-height:1.65;">Sie gehen bei jedem Besuch zufrieden. Konsistenz ist unsere größte Stärke.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ REVIEWS ══ -->
+<section id="reviews" class="section-pad" style="background:var(--black);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="text-align:center;margin-bottom:56px;">
+      <div class="section-badge fade-up" style="justify-content:center;"><span>Google Bewertungen</span></div>
+      <h2 class="section-heading fade-up" style="font-size:clamp(30px,4vw,46px);">Was Kunden <span class="accent-red">sagen</span></h2>
+    </div>
+    <div style="overflow:hidden;" id="reviewSlider">
+      <div class="review-track" id="reviewTrack">
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <div class="stars" style="margin-bottom:16px;">★★★★★</div>
+          <p style="font-size:15px;color:var(--silver-light);line-height:1.75;margin-bottom:20px;font-style:italic;">"Bester Barbier in Wien! Ich habe sehr dichtes Haar und mein Fade sieht nur gut aus, wenn der Übergang extrem präzise geschnitten ist. Genau deshalb fahre ich vom 4. in den 21. Bezirk — ich lasse mir von keinem anderen mehr die Haare schneiden."</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:38px;height:38px;border-radius:50%;background:rgba(139,26,26,0.2);border:1px solid rgba(139,26,26,0.4);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;color:var(--silver-light);">P</div>
+            <div><div style="font-family:'Oswald',sans-serif;font-size:14px;letter-spacing:0.05em;color:var(--white);">Priyesh S.</div><div style="font-size:11px;color:var(--silver-dim);margin-top:2px;">Lokaler Guide · Google Bewertung</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <div class="stars" style="margin-bottom:16px;">★★★★★</div>
+          <p style="font-size:15px;color:var(--silver-light);line-height:1.75;margin-bottom:20px;font-style:italic;">"Der beste Friseur im Bereich Floridsdorf. Immer scharf, immer konsistent. Meinen Lieblingsplatz gefunden und ich gehe nirgendwo anders mehr hin."</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:38px;height:38px;border-radius:50%;background:rgba(139,26,26,0.2);border:1px solid rgba(139,26,26,0.4);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;color:var(--silver-light);">K</div>
+            <div><div style="font-family:'Oswald',sans-serif;font-size:14px;letter-spacing:0.05em;color:var(--white);">Kamiren I.</div><div style="font-size:11px;color:var(--silver-dim);margin-top:2px;">Google Bewertung</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <div class="stars" style="margin-bottom:16px;">★★★★★</div>
+          <p style="font-size:15px;color:var(--silver-light);line-height:1.75;margin-bottom:20px;font-style:italic;">"Das ist der beste Friseur von 1210 Wien. Mitarbeiter super freundlich, schön angenehme Atmosphäre. Sehr empfehlenswert für alle in der Gegend!"</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:38px;height:38px;border-radius:50%;background:rgba(139,26,26,0.2);border:1px solid rgba(139,26,26,0.4);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;color:var(--silver-light);">S</div>
+            <div><div style="font-family:'Oswald',sans-serif;font-size:14px;letter-spacing:0.05em;color:var(--white);">Sokic W.</div><div style="font-size:11px;color:var(--silver-dim);margin-top:2px;">Google Bewertung</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <div class="stars" style="margin-bottom:16px;">★★★★★</div>
+          <p style="font-size:15px;color:var(--silver-light);line-height:1.75;margin-bottom:20px;font-style:italic;">"Verlässt den Stuhl nie enttäuscht. Jedes Mal genau das, was ich wollte. So sollte sich ein echter Barbershop anfühlen — komfortabel, präzise und einladend."</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:38px;height:38px;border-radius:50%;background:rgba(139,26,26,0.2);border:1px solid rgba(139,26,26,0.4);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;color:var(--silver-light);">M</div>
+            <div><div style="font-family:'Oswald',sans-serif;font-size:14px;letter-spacing:0.05em;color:var(--white);">Michael T.</div><div style="font-size:11px;color:var(--silver-dim);margin-top:2px;">Google Bewertung</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <div class="stars" style="margin-bottom:16px;">★★★★★</div>
+          <p style="font-size:15px;color:var(--silver-light);line-height:1.75;margin-bottom:20px;font-style:italic;">"Habe meinen Sohn für seinen ersten Fade hierher gebracht und sie waren unglaublich geduldig. Er ging lächelnd raus und fragte, wann wir wiederkommen. Nächsten Besuch bereits gebucht."</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:38px;height:38px;border-radius:50%;background:rgba(139,26,26,0.2);border:1px solid rgba(139,26,26,0.4);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;color:var(--silver-light);">D</div>
+            <div><div style="font-family:'Oswald',sans-serif;font-size:14px;letter-spacing:0.05em;color:var(--white);">David R.</div><div style="font-size:11px;color:var(--silver-dim);margin-top:2px;">Google Bewertung</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:center;gap:12px;margin-top:32px;">
+      <button onclick="slideReview(-1)" style="width:44px;height:44px;border:1px solid rgba(139,26,26,0.4);background:transparent;border-radius:2px;color:var(--silver);cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='rgba(160,160,160,0.1)'" onmouseout="this.style.background='transparent'">←</button>
+      <button onclick="slideReview(1)" style="width:44px;height:44px;border:1px solid rgba(139,26,26,0.4);background:transparent;border-radius:2px;color:var(--silver);cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='rgba(160,160,160,0.1)'" onmouseout="this.style.background='transparent'">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section id="faq" class="section-pad" style="background:var(--black);">
+  <div style="max-width:760px;margin:0 auto;padding:0 24px;">
+    <div style="text-align:center;margin-bottom:56px;">
+      <h2 class="section-heading fade-up" style="font-size:clamp(30px,4vw,46px);">Häufige <span class="accent-red">Fragen</span></h2>
+    </div>
+    <div id="faqList">
+      <div class="faq-item fade-up"><button class="faq-btn" onclick="toggleFaq(this)"><span>Brauche ich einen Termin?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Kein Termin nötig. Walk-Ins sind bei Momo Barber immer willkommen. Während der Stoßzeiten hilft ein kurzer Anruf unter 0676 5992433, damit wir Ihnen die aktuelle Wartezeit mitteilen können.</p></div></div>
+      <div class="faq-item fade-up stagger-1"><button class="faq-btn" onclick="toggleFaq(this)"><span>Wie lange dauert ein Haarschnitt?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Ein Standardschnitt dauert etwa 20–30 Minuten. Ein vollständiger Skin Fade kann 35–45 Minuten dauern. Das Komplett-Pflege-Paket dauert typischerweise 60–75 Minuten. Wir hetzen nie — Qualität hat Priorität.</p></div></div>
+      <div class="faq-item fade-up stagger-2"><button class="faq-btn" onclick="toggleFaq(this)"><span>Welche Fade-Stile bieten Sie an?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Wir sind spezialisiert auf Skin Fades, Zero Fades, Low Fades, Mid Fades und High Fades. Zeigen Sie uns einfach ein Referenzfoto und wir liefern.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-btn" onclick="toggleFaq(this)"><span>Schneiden Sie auch Kinderhaare?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Absolut. Wir bieten spezielle Kinderhaarschnitte ab €15 an. Unsere Barbiere sind geduldig und freundlich mit Kindern jeden Alters. Kinder-Fades und Haar-Designs sind zu einem günstigen Preis erhältlich.</p></div></div>
+      <div class="faq-item fade-up stagger-1"><button class="faq-btn" onclick="toggleFaq(this)"><span>Welche Zahlungsmethoden akzeptieren Sie?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Wir akzeptieren Bar- und Kartenzahlungen. Bei Fragen rufen Sie uns gerne unter 0676 5992433 an, um die Zahlungsoptionen zu bestätigen.</p></div></div>
+      <div class="faq-item fade-up stagger-2"><button class="faq-btn" onclick="toggleFaq(this)"><span>Wo befinden Sie sich?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Wir befinden uns in der Prager Str. 49, 1210 Wien — mitten im Herzen von Floridsdorf. Gut mit öffentlichen Verkehrsmitteln erreichbar. Geöffnet Montag bis Samstag.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-btn" onclick="toggleFaq(this)"><span>Machen Sie auch reine Bart-Termine?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Ja! Sie können einfach für ein Barttrimmen (€8), eine Modellbart-Formung (€13) oder eine vollständige Bartrasur (€10) hereinkommen. Kein Haarschnitt erforderlich.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact" class="section-pad">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="text-align:center;margin-bottom:56px;">
+      <h2 class="section-heading fade-up" style="font-size:clamp(30px,4vw,46px);">Termin noch heute <span class="accent-red">buchen</span></h2>
+      <p class="fade-up stagger-1" style="color:var(--silver-dim);font-size:15px;margin-top:12px;">Kommen Sie vorbei oder rufen Sie vorher an. Wir sind für Sie da.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;" class="contact-grid">
+      <div class="fade-up">
+        <div style="display:flex;gap:14px;align-items:flex-start;margin-bottom:20px;">
+          <div class="info-icon">📍</div>
+          <div>
+            <div style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.1em;color:var(--silver-dim);text-transform:uppercase;margin-bottom:4px;">Adresse</div>
+            <div style="color:var(--white);font-size:15px;line-height:1.6;">Prager Str. 49<br/>1210 Wien, Österreich</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;margin-bottom:20px;">
+          <div class="info-icon">📞</div>
+          <div>
+            <div style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.1em;color:var(--silver-dim);text-transform:uppercase;margin-bottom:4px;">Telefon</div>
+            <a href="tel:06765992433" style="color:var(--silver-light);font-size:20px;font-family:'Oswald',sans-serif;letter-spacing:0.06em;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--red-bright)'" onmouseout="this.style.color='var(--silver-light)'">0676 5992433</a>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;margin-bottom:24px;">
+          <div class="info-icon">🕐</div>
+          <div style="width:100%;">
+            <div style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.1em;color:var(--silver-dim);text-transform:uppercase;margin-bottom:12px;">Öffnungszeiten</div>
+            <div class="hours-row"><span style="color:var(--white);">Montag – Donnerstag</span><span style="color:var(--silver-light);">09:00 – 19:00</span></div>
+            <div class="hours-row"><span style="color:var(--white);">Freitag</span><span style="color:var(--silver-light);">09:00 – 20:00</span></div>
+            <div class="hours-row"><span style="color:var(--white);">Samstag</span><span style="color:var(--silver-light);">09:00 – 18:00</span></div>
+            <div class="hours-row"><span style="color:var(--white);">Sonntag</span><span style="color:var(--silver-dim);">Geschlossen</span></div>
+          </div>
+        </div>
+        <div class="contact-cta-btns" style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="tel:06765992433" class="btn-red" style="font-size:13px;padding:12px 20px;display:flex;align-items:center;gap:8px;"><span>📞</span> Jetzt anrufen</a>
+          <a href="https://wa.me/436765992433" target="_blank" rel="noopener" style="background:#25D366;color:#fff;font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:12px 20px;border-radius:2px;display:flex;align-items:center;gap:8px;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='#1ebe5a'" onmouseout="this.style.background='#25D366'"><span>💬</span> WhatsApp</a>
+        </div>
+        <div class="map-wrap" style="margin-top:28px;">
+          <iframe src="https://maps.google.com/maps?q=Prager+Str.+49,+1210+Wien&output=embed&z=15" width="100%" height="280" style="border:none;display:block;" title="Momo Barber location map"></iframe>
+        </div>
+      </div>
+      <div class="fade-up stagger-1" style="background:var(--graphite);border:1px solid rgba(160,160,160,0.1);border-radius:2px;padding:36px;">
+        <h3 class="font-heading" style="font-size:22px;letter-spacing:0.04em;margin-bottom:8px;color:var(--white);">Schreiben Sie uns</h3>
+        <p style="color:var(--silver-dim);font-size:14px;margin-bottom:28px;">Wir melden uns so schnell wie möglich bei Ihnen.</p>
+        <form onsubmit="handleForm(event)" style="display:flex;flex-direction:column;gap:16px;">
+          <input type="text" class="contact-input" placeholder="Ihr Name" required/>
+          <input type="tel" class="contact-input" placeholder="Telefonnummer" required/>
+          <input type="email" class="contact-input" placeholder="E-Mail-Adresse"/>
+          <select class="contact-input" style="appearance:none;cursor:pointer;">
+            <option value="" disabled selected>Leistung wählen</option>
+            <option>Skin / Zero Fade — €21</option>
+            <option>Standardschnitt — €19</option>
+            <option>Individueller Fade — €24</option>
+            <option>Waschen & Schneiden — €23</option>
+            <option>Komplett-Pflege-Paket — €42</option>
+            <option>Bartpflege</option>
+            <option>Kinderhaarschnitt</option>
+            <option>Sonstiges</option>
+          </select>
+          <textarea class="contact-input" placeholder="Anmerkungen oder Fragen?" rows="4" style="resize:vertical;"></textarea>
+          <button type="submit" class="btn-red" style="font-size:14px;padding:14px;width:100%;border:none;">Nachricht senden</button>
+        </form>
+        <div id="formSuccess" style="display:none;text-align:center;padding:32px 20px;">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" style="margin-bottom:20px;">
+            <circle cx="28" cy="28" r="26" stroke="rgba(139,26,26,0.25)" stroke-width="2"/>
+            <circle cx="28" cy="28" r="26" stroke="var(--red-bright)" stroke-width="2" stroke-dasharray="163" stroke-dashoffset="163" style="animation:check-draw 0.7s var(--ease-out-expo) 0.1s forwards;"/>
+            <polyline points="17,28 24,36 39,20" stroke="var(--red-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" class="success-check"/>
+          </svg>
+          <div class="font-heading" style="font-size:22px;letter-spacing:0.04em;color:var(--white);margin-bottom:10px;">Nachricht empfangen.</div>
+          <p style="color:var(--silver-dim);font-size:14px;line-height:1.75;margin-bottom:20px;">Wir melden uns — kein Hetzen, kein Warten.<br/>Oder ruf direkt an:</p>
+          <a href="tel:06765992433" style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.08em;color:var(--silver-light);text-decoration:none;">0676 5992433</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer style="padding:48px 0 100px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <!-- mustache emblem -->
+    <div style="display:flex;align-items:center;justify-content:center;margin-bottom:32px;">
+      <div style="flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(160,160,160,0.15));"></div>
+      <svg width="56" height="22" viewBox="0 0 100 38" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 20px;opacity:0.3;">
+        <path d="M50 22 C44 14 32 8 20 12 C10 16 6 26 12 30 C18 34 28 26 34 20 C38 16 44 14 50 22 C56 14 62 16 66 20 C72 26 82 34 88 30 C94 26 90 16 80 12 C68 8 56 14 50 22Z" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+      </svg>
+      <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(160,160,160,0.15),transparent);"></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;padding-bottom:32px;border-bottom:1px solid rgba(160,160,160,0.08);">
+      <div class="footer-logo-block">
+        <img src="Logo%20.png" alt="Momo Barber" style="height:110px;width:auto;object-fit:contain;margin-left:-12px;" onerror="this.style.display='none'"/>
+        <p style="color:var(--silver-dim);font-size:13px;margin-top:6px;">Premium Barbershop · 1210 Wien · Floridsdorf</p>
+      </div>
+      <div style="display:flex;gap:24px;flex-wrap:wrap;">
+        <a href="#about" style="color:var(--silver-dim);font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--silver-dim)'">Über uns</a>
+        <a href="#services" style="color:var(--silver-dim);font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--silver-dim)'">Leistungen</a>
+        <a href="#gallery" style="color:var(--silver-dim);font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--silver-dim)'">Galerie</a>
+        <a href="#contact" style="color:var(--silver-dim);font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--silver-dim)'">Kontakt</a>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:24px;">
+      <p style="color:rgba(160,160,160,0.35);font-size:12px;">© 2024 Momo Barber & Handy Shop · Prager Str. 49, 1210 Wien · Alle Rechte vorbehalten.</p>
+      <p style="color:rgba(160,160,160,0.25);font-size:12px;">Premium Barbershop Wien</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ MOBILE CTA ══ -->
+<div class="mobile-cta">
+  <a href="tel:06765992433" class="btn-red cta-pulse" style="flex:1;text-align:center;font-size:13px;padding:12px;">📞 Jetzt anrufen</a>
+  <a href="https://wa.me/436765992433" target="_blank" rel="noopener" style="flex:1;text-align:center;background:#25D366;color:#fff;font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:12px;border-radius:2px;text-decoration:none;">💬 WhatsApp</a>
+</div>
+
+<!-- Instagram Float -->
+<a href="https://www.instagram.com/memo_barber_und_handy_shop/" target="_blank" rel="noopener" class="ig-float" title="Instagram">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="white" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="4" stroke="white" stroke-width="2" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
+</a>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/436765992433" target="_blank" rel="noopener" class="wa-float" title="WhatsApp us">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Fixed barber pole side stripes -->
+<div class="barber-pole barber-pole-left">
+  <div class="barber-pole-stripes"></div>
+  <div class="barber-pole-shine"></div>
+</div>
+<div class="barber-pole barber-pole-right">
+  <div class="barber-pole-stripes"></div>
+  <div class="barber-pole-shine"></div>
+</div>
+
+<script>
+// Scroll: nav + progress bar
+const progressBar = document.getElementById('scroll-progress');
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20);
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (total > 0 ? (window.scrollY / total * 100) : 0) + '%';
+});
+
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+// ── SERVICE TAB SLIDER ──
+const slideIds=['haircuts','beard','kids','package'];
+let currentSlide=0;
+let sliderEl,sliderWrap;
+
+function initSlider(){
+  const panels=[...document.querySelectorAll('.tab-content')];
+  const parent=panels[0].parentNode;
+  sliderWrap=document.createElement('div');
+  sliderWrap.className='tabs-slider-wrap';
+  sliderEl=document.createElement('div');
+  sliderEl.className='tabs-slider';
+  parent.insertBefore(sliderWrap,panels[0]);
+  sliderWrap.appendChild(sliderEl);
+  panels.forEach(p=>sliderEl.appendChild(p));
+
+  // dot indicators
+  const dots=document.createElement('div');
+  dots.className='tab-dots';
+  slideIds.forEach((id,i)=>{
+    const d=document.createElement('span');
+    d.className='tab-dot'+(i===0?' active':'');
+    d.onclick=()=>goToSlide(i);
+    dots.appendChild(d);
+  });
+  sliderWrap.after(dots);
+
+  // touch swipe
+  let tx=0,drag=false;
+  sliderWrap.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;drag=true;},{passive:true});
+  sliderWrap.addEventListener('touchend',e=>{
+    if(!drag)return;drag=false;
+    const dx=e.changedTouches[0].clientX-tx;
+    if(Math.abs(dx)>48)goToSlide(Math.max(0,Math.min(slideIds.length-1,currentSlide+(dx<0?1:-1))));
+  },{passive:true});
+}
+
+function goToSlide(idx){
+  if(idx===currentSlide)return;
+  currentSlide=idx;
+  sliderEl.style.transform=`translateX(-${idx*100}%)`;
+  document.querySelectorAll('.tab-btn').forEach((b,i)=>b.classList.toggle('active',i===idx));
+  document.querySelectorAll('.tab-dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
+}
+
+function switchTab(tabId,btn){
+  goToSlide(slideIds.indexOf(tabId));
+}
+
+document.addEventListener('DOMContentLoaded',initSlider);
+function toggleFaq(btn){const answer=btn.nextElementSibling;const icon=btn.querySelector('.faq-icon');const isOpen=answer.classList.contains('open');document.querySelectorAll('.faq-answer.open').forEach(a=>{a.classList.remove('open');a.previousElementSibling.querySelector('.faq-icon').classList.remove('open');a.previousElementSibling.querySelector('.faq-icon').textContent='+';});if(!isOpen){answer.classList.add('open');icon.classList.add('open');icon.textContent='+';}}
+let reviewIdx=0;
+function getVisible(){const w=window.innerWidth;if(w>=1024)return 3;if(w>=768)return 2;return 1;}
+function slideReview(dir){const track=document.getElementById('reviewTrack');const cards=track.querySelectorAll('.review-card');const visible=getVisible();const max=cards.length-visible;reviewIdx=Math.max(0,Math.min(reviewIdx+dir,max));const cardW=track.offsetWidth/visible;track.style.transform=`translateX(-${reviewIdx*(cardW+24)}px)`;}
+
+function animateCounter(el){
+  const target=parseFloat(el.dataset.count);
+  const suffix=el.dataset.suffix||'';
+  const decimals=parseInt(el.dataset.decimals||'0');
+  const duration=1400;
+  const start=performance.now();
+  const from=target>100?0:0;
+  function tick(now){
+    const p=Math.min((now-start)/duration,1);
+    const ease=1-Math.pow(1-p,4);
+    const val=from+(target-from)*ease;
+    const fmt=v=>(decimals>0?v.toFixed(decimals):Math.round(v)).toString().replace('.',',');
+    el.textContent=fmt(val)+suffix;
+    if(p<1)requestAnimationFrame(tick);
+    else el.textContent=fmt(target)+suffix;
+  }
+  requestAnimationFrame(tick);
+}
+
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      if(e.target.dataset.count!==undefined) animateCounter(e.target);
+      observer.unobserve(e.target);
+    }
+  });
+},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
+
+document.querySelectorAll('.fade-up,.fade-in').forEach(el=>observer.observe(el));
+document.querySelectorAll('[data-count]').forEach(el=>observer.observe(el));
+
+function handleForm(e){e.preventDefault();e.target.style.display='none';document.getElementById('formSuccess').style.display='block';}
+
+
+// ✂ Easter egg
+console.log('%c✂  MOMO BARBER','font-family:monospace;font-size:20px;font-weight:bold;color:#8B1A1A;');
+console.log('%cFade-Spezialist · Prager Str. 49 · 1210 Wien','color:#A0A0A0;font-size:13px;');
+console.log('%cNeugierig auf die Website? Ruf uns an: 0676 5992433','color:#585858;font-size:12px;');
+</script>
+</body>
+</html>
